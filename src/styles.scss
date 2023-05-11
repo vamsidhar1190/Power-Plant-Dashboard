@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+
+
+@import "/node_modules/primeflex/primeflex.css";
+
+.pie-chart-wrapper .apexcharts-canvas{
+    width: 340px !important;
+    // overflow: hidden;
+    
+     }
+.pie-chart-wrapper     .apexcharts-legend{
+    display: flex;
+  
+transform: translateX(-100px);    
+}
+
+.pie-chart-wrapper .apexcharts-inner{
+transform: translate(35%,22%);
+}
+  #SvgjsSvg1196{
+    width: 300px !important;
+    height: 500px !important;
+  }
+
+.chartbar-wrapper .raphael-group-TDfVQXBt{
+    display: none !important;
+}
+body{
+  font-family: sans-serif !important;
+}
+.p-datatable .p-datatable-thead > tr > th {
+  text-align: left;
+  padding: 1rem 1rem;
+  border: 1px solid #dee2e6;
+  border-width: 0 0 1px 0;
+  font-weight: 700;
+  color: #fff;
+   background: #007bff ; 
+  transition: box-shadow 0.2s;
+}
+.chartbar-wrapper #chart {
+  transform: translateY(-21px);
+}

@@ -1,0 +1,212 @@
+<div class="container-fluid header-wrapper">
+    <div class="d-flex gap-2">
+        <h4>Power Plant Monitoring Dashboard</h4>
+      
+    </div>
+    <div class="header-wrapper-block">
+        <h4 class="header-wrapper-content header-wrapper-icon-second">Data Refreshed at {{dashboardDate|date:"medium"}}</h4>
+       
+    </div>
+</div>
+
+
+<div class="d-flex capacity-generate-wrapper mt-2 col-12 gap-0">
+    <div class="col-3 capacity-generate-wrapper-block-first ">
+        <div class="content-data col-12 ">
+            <div class="content">
+                <h5>Total Capacity(MW)</h5>
+                <p class="content-capacity">{{totalCapacity|number}}</p>
+            </div>
+        </div>
+
+
+        <div class="content-data content-data-block col-12">
+            <div class="content-production">
+                <p class="content-data">{{productionEfficency|number}}%</p>
+                <h5>Energy Production Efficiency</h5>
+                <div class="generated-content">
+                    <div class="generate-content">
+                        <p style="font-size: 15px; line-height: 0px;">371,706</p>
+                        <span>Generated(MW)</span>
+                    </div>
+
+                    <div class="generate-conten">
+                        <p style="font-size: 15px; line-height: 0px;">371,706</p>
+                        <span>Generated(MW)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="chart" class="ms-2" >
+        <div class="turbine-content">
+            <div class="d-flex">
+                <h5 class="m-3">Avg. Efficiency of Turbines</h5>
+               
+               </div>
+                <apx-chart
+                  [series]="chartOptions6.series"
+                  [chart]="chartOptions6.chart"
+                  [dataLabels]="chartOptions6.dataLabels"
+                  [plotOptions]="chartOptions6.plotOptions"
+                  [yaxis]="chartOptions6.yaxis"
+                  [xaxis]="chartOptions6.xaxis"
+                  [stroke]="chartOptions6.stroke"
+                  [grid]="chartOptions6.grid"
+                  [fill]="chartOptions6.fill"
+                  [annotations]="chartOptions6.annotations"
+                  [style]="{width:'100%'}"
+                ></apx-chart>
+        </div>
+      </div>
+    </div>
+  
+
+
+<div class="d-flex  gap-3 chartbar-wrapper m-3">
+    <div class="chartbar-wrapper-two-blocks d-flex gap-3" style="width: 66%;">
+        <div class="chart1">
+            <div class="d-flex ">
+                <h5 class="m-3">System Frequency</h5>
+               
+            </div>
+            <div id="chart">
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                [plotOptions]="chartOptions.plotOptions" [labels]="chartOptions.labels"
+                [fill]="chartOptions.fill"></apx-chart>
+                <!-- <fusioncharts type="angulargauge" width="380" height="180" dataFormat="json"
+                    [dataSource]="systemFrequency"></fusioncharts> -->
+            </div>
+        </div>
+
+        <div class="chart2">
+            <div class="d-flex ">
+                <h5 class="m-3">Ambient Temperature</h5>
+             
+            </div>
+            <div id="chart">
+                <apx-chart [series]="chartOptions4.series" [chart]="chartOptions4.chart"
+                    [plotOptions]="chartOptions4.plotOptions" [labels]="chartOptions4.labels"
+                    [fill]="chartOptions4.fill">
+                </apx-chart>
+              
+            </div>
+        </div>
+    </div>
+
+
+    <div class="chart3" style="width: 33%;">
+        <div class="d-flex ">
+            <h5 class="m-3">Relative Humidity</h5>
+            
+        </div>
+        <div id="chart" >
+            <apx-chart [series]="chartOptions5.series" [chart]="chartOptions5.chart"
+                [plotOptions]="chartOptions5.plotOptions" [labels]="chartOptions5.labels" [fill]="chartOptions5.fill">
+            </apx-chart>
+            
+        </div>
+    </div>
+</div> 
+
+<div class="d-flex gap-3 m-3">
+    <div style="width: 66%;" class="barchart-content">
+            <div id="chart barcharts">
+                <div class="d-flex ">
+                    <h5 class="m-3">ROI by Location</h5>
+                    
+                </div>
+                <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"
+                    [dataLabels]="chartOptions2.dataLabels" [plotOptions]="chartOptions2.plotOptions"
+                    [xaxis]="chartOptions2.xaxis"></apx-chart>
+            </div>
+        </div>
+
+
+    <div style="width: 33%;" class="pie-chart pie-chart-wrapper">
+            <div id="chart">
+                <div class="d-flex ">
+                    <h5 class="m-3">Turbine Status</h5>
+                  
+                </div>
+            <!-- <apx-chart [series]="chartOptions3.series" [chart]="chartOptions3.chart" [labels]="chartOptions3.labels"
+                [responsive]="chartOptions3.responsive"></apx-chart> -->
+                <p-chart type="pie" [data]="data" [options]="options"></p-chart>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="m-3 plant-data">
+     <div class="d-flex ">
+        <h5 class="m-3">Power Plant Details</h5>
+       
+    </div>
+
+       <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr [style]="{'color':'red'}">
+                <th>Location</th>
+                <th>Turbines Types</th>
+                <th>Capacity(tons)</th>
+                <th>Expected Output</th>
+                <th>Actual Output</th>
+                <th>Status</th>
+                <th>Production Rate</th>
+                <th>Capacity Utiliz...</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.location}}</td>
+                <td>{{ product.turbinestypes }}</td>
+                <td>{{ product.capacity|number}}</td>
+                <td>{{ product.expectedOutput }} MW</td>
+                <td>{{ product.actualdOutput }} MW</td>
+                <td [class.availabile]="product.status === 'Available'" [class.offline]="product.status === 'Offline'">
+                    {{ product.status }}</td>
+                <td>{{ product.productionRate }}</td>
+                <td>
+                    <p-progressBar value="{{product.progressValue}}"></p-progressBar>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <!-- <p-treeTable [value]="files" [columns]="cols" [paginator]="true" [rows]="10" [scrollable]="true"
+        [tableStyle]="{'min-width':'50rem'}">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns; let i = index">
+                    <p-treeTableToggler [rowNode]="rowNode" *ngIf="i === 0"></p-treeTableToggler>
+                    <ng-container *ngIf="col.field === 'CapacityUti'">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1 mr-2">
+                                <p-progressBar [value]="rowData[col.field]" [showValue]="true"
+                                    styleClass="p-progress-info"></p-progressBar>
+                            </div>
+                            <div>{{rowData[col.field]}}%</div>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="col.field !== 'CapacityUti'">
+                        {{ rowData[col.field] }}
+                    </ng-container>
+                </td>
+            </tr>
+        </ng-template>
+
+    </p-treeTable>  -->
+ 
+
+</div>
