@@ -1,239 +1,518 @@
 .header-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 5px 5px #ccc;
-    height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px #ccc;
+  height: 60px;
 }
 
-// .header-wrapper-content::after {
-//     content: "";
-//     position: absolute;
-//     right: 100px;
-//     height: 30px !important;
-//     width: 1px;
-//     // background-color: #ccc;
-// }
-
 .header-wrapper-block {
-    display: flex;
+  display: flex;
 }
 
 .header-wrapper-icon {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .header-wrapper-icon-second {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .header-wrapper-icon::after {
-    content: "";
-    position: absolute;
-    right: 40px;
-    height: 30px !important;
-    width: 1px;
-    background-color: #ccc;
+  content: "";
+  position: absolute;
+  right: 40px;
+  height: 30px !important;
+  width: 1px;
+  background-color: #ccc;
 }
 
 .header-wrapper-block h4 {
-    padding-right: 20px;
-
+  padding-right: 20px;
 }
 
 .content {
-    // width: 20%;
-    // height: 15%;
-    box-shadow: 0 0 2px 2px #ccc;
-    border-radius: 4px;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+  // width: 20%;
+  // height: 15%;
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 4px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
 }
 .content-data {
-    margin-top: -8px;
+  margin-top: -8px;
 }
 
 .content-capacity {
-    font-size: 40px;
-    font-weight: bold;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .content-production {
-    // width: 20%;
+  // width: 20%;
 
-    box-shadow: 0 0 2px 2px #ccc;
-    border-radius: 4px;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 15px;
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 4px;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 15px;
 }
-.generated-content{
-    justify-content: center;
+.generated-content {
+  justify-content: center;
 }
-.content-data-block{
-    transform: translateY(13px);
+.content-data-block {
+  transform: translateY(13px);
 }
 
 .generate-conten span,
 .generate-content span {
-    font-size: 18px;
-    color: #ccc;
+  font-size: 18px;
+  color: #ccc;
 }
 
 .content-data {
-    font-size: 40px;
-    font-weight: bold;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .generated-content {
-    display: flex;
+  display: flex;
 }
 
 .generate-content {
-    border-right: 3px solid #ccc;
-    padding: 10px;
+  border-right: 3px solid #ccc;
+  padding: 10px;
 }
 
 .generate-conten {
-    padding: 10px;
+  padding: 10px;
 }
 
 .charts-graph {
-    background-color: white;
-    box-shadow: 2px 2px 2px 2px #ccc;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #ccc;
 }
 
 .graph-chart-info {
-    // width: 70%; 
-    // height: 30%;
-    // overflow: hidden;
-    // height: 600px !important;
-    // width: 1223px !important;
-    box-shadow: 2px 2px 2px 2px #ccc;
-    border-radius: 4px;
-    // height: 430px;
-
+  // width: 70%;
+  // height: 30%;
+  // overflow: hidden;
+  // height: 600px !important;
+  // width: 1223px !important;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  border-radius: 4px;
+  // height: 430px;
 }
-.graph-chart-info-block{
-    // height: 600px !important;
-    // width: 1223px !important;
+.graph-chart-info-block {
+  // height: 600px !important;
+  // width: 1223px !important;
 }
 
 .capacity-generate-wrapper-block-first {
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-    margin: 0px !important;
-    padding: 0px !important;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .content-data {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .chart1 {
-    width: 49%;
-    overflow: hidden;
-    max-height: 237px;
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-
-
+  width: 49%;
+  overflow: hidden;
+  max-height: 237px;
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
 }
 .chart2 {
-    width: 49%;
-    overflow: hidden;
-    max-height: 237px;
+  width: 49%;
+  overflow: hidden;
+  max-height: 237px;
 
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-
-
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
 }
 
 .chart3 {
-    width: 30%;
-    max-height: 237px;
-    overflow: hidden;
+  width: 30%;
+  max-height: 237px;
+  overflow: hidden;
 
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-
-
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
 }
 
 .chart3 {
-    width: 30%;
-    // box-shadow: 0px 0px 2px 2px #ccc;
-
+  width: 30%;
+  // box-shadow: 0px 0px 2px 2px #ccc;
 }
-
 
 .error {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 
 .barchart-content {
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-
-
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
 }
 
 .pie-chart {
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
 }
 
 .plant-data {
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
+}
+.chartbar-wrapper {
+  justify-content: space-between;
+  align-items: center;
+}
 
+.availabile {
+  color: green;
+  font-weight: 500;
 }
-.chartbar-wrapper{
-    justify-content: space-between;
-    align-items: center;
+.offline {
+  color: red;
+  font-weight: 500;
 }
-
-.availabile{
-    color: green;
-    font-weight: 500;
+#chart {
+  // box-shadow: 0px 0px 2px 2px #ccc;
+  width: 100%;
 }
-.offline{
-    color: red;
-    font-weight: 500;
-
+.turbine-content {
+  box-shadow: 0px 0px 2px 2px #ccc;
+  border-radius: 4px;
+  width: 99% !important ;
 }
-#chart{
-    // box-shadow: 0px 0px 2px 2px #ccc;
-    width: 100%;
+.header-wrapper h4 {
+  font-size: 20px;
+  color: #333333;
 }
-.turbine-content{
-    box-shadow: 0px 0px 2px 2px #ccc;
-    border-radius: 4px;
-    width: 99% !important ;
-
-
-
-}
-.header-wrapper h4{
-    font-size: 20px;
-    color: #333333 ;
-}
-.header-wrapper-content{
-    font-size: 20px;
-    color: #808080 !important;
+.header-wrapper-content {
+  font-size: 20px;
+  color: #808080 !important;
 }
 .generate-content span {
-    color: #808080 !important;
+  color: #808080 !important;
 }
 
 .generate-conten span {
-    color: #808080 !important;
+  color: #808080 !important;
 }
 
-  
+//tab responsive starts here
+
+@media only screen and (min-width: 768px) and (max-width: 1028px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .main-dashboard-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .header-wrapper h4 {
+    font-size: 25px;
+    padding: 4px;
+  }
+  .header-wrapper-content {
+    font-size: 18px !important;
+  }
+  .header-wrapper-block {
+    width: 30%;
+  }
+  .capacity-generate-wrapper {
+    flex-direction: column-reverse;
+  }
+  .capacity-generate-wrapper-block-first {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .content-data-first {
+    width: 40%;
+  }
+  .content-data-second {
+    width: 55%;
+  }
+
+  .content-capacity {
+    font-size: 25px;
+  }
+  .total-capacity-title {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .Energy-Production-title {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .chartbar-wrapper h5 {
+    font-size: 22px !important;
+  }
+  .content-data {
+    font-size: 25px;
+    margin-top: 0px;
+    padding-left: 0;
+  }
+  .content-production .generate-content p {
+    font-size: 18px !important;
+    margin-bottom: 10px;
+  }
+  .content-production .generate-content span {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .content-production .generate-conten p {
+    font-size: 18px !important;
+    margin-bottom: 10px;
+  }
+  .content-data-second {
+    padding-right: 0;
+  }
+  .content-production .generate-conten span {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  .content-production {
+    padding: 20px 15px;
+  }
+
+  .content-data-block {
+    transform: translateY(0px);
+  }
+
+  .turbine-content-wrapper {
+    margin-left: 0px !important;
+  }
+  .turbine-content {
+    width: 100% !important;
+  }
+  .barchart-content-wrapper h5 {
+    font-size: 22px !important;
+  }
+  .content-data-first .content {
+    padding: 53px 20px;
+  }
+  .chartbar-wrapper {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px !important;
+  }
+  .barchart-content-wrapper {
+    margin: 20px 0px !important;
+  }
+  .chartbar-wrapper-two-blocks {
+    flex-wrap: wrap;
+  }
+  .chartbar-wrapper-two-blocks .chart1 {
+    width: 100%;
+    max-height: none;
+    height: auto;
+  }
+  .plant-data {
+    margin: 20px 0px !important;
+  }
+  .chartbar-wrapper .chartbar-wrapper-two-blocks {
+    width: 100% !important;
+  }
+  .chartbar-wrapper-two-blocks .chart2 {
+    width: 100% !important;
+    max-height: none;
+    height: auto;
+  }
+  .chartbar-wrapper .chart3 {
+    width: 100% !important;
+    max-height: none;
+    height: auto;
+  }
+  .barchart-content-wrapper {
+    flex-direction: column;
+  }
+  .barchart-content {
+    width: 100% !important;
+  }
+  .pie-chart-wrapper {
+    width: 100% !important;
+  }
+  .turbine-content-wrapper h5 {
+    font-size: 22px !important;
+  }
+  .pie-chart-wrapper h5 {
+    font-size: 22px !important;
+  }
+
+  .plant-data h5 {
+    font-size: 22px !important;
+  }
+}
+//tab responsive ends here
+
+//mobile responsive starts here
+
+@media only screen and (max-width: 767px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  .main-dashboard-wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .header-wrapper h4 {
+    font-size: 15px;
+    padding: 4px;
+  }
+  .header-wrapper-content {
+    font-size: 10px !important;
+  }
+  .header-wrapper-block {
+    width: 30%;
+  }
+  .capacity-generate-wrapper {
+    flex-direction: column-reverse;
+  }
+  .capacity-generate-wrapper-block-first {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .content-data-first {
+    width: 40%;
+  }
+  .content-data-second {
+    width: 55%;
+  }
+
+  .content-capacity {
+    font-size: 15px;
+  }
+  .total-capacity-title {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .Energy-Production-title {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .chartbar-wrapper h5 {
+    font-size: 14px !important;
+  }
+  .content-data {
+    font-size: 15px;
+    margin-top: 0px;
+    padding-left: 0;
+  }
+  .content-production .generate-content p {
+    font-size: 12px !important;
+  }
+  .content-production .generate-content span {
+    font-size: 10px;
+
+    color: #929191 !important;
+    letter-spacing: 1px;
+  }
+
+  .content-production .generate-conten p {
+    font-size: 12px !important;
+  }
+  .content-data-second {
+    padding-right: 0;
+  }
+  .content-production .generate-conten span {
+    font-size: 10px;
+    color: #929191 !important;
+
+    letter-spacing: 1px;
+  }
+  .content-production {
+    padding: 20px 15px;
+  }
+  .generate-conten {
+    margin-top: 5px;
+
+    padding: 5px;
+  }
+  .content-data-block {
+    transform: translateY(0px);
+  }
+  .generate-content {
+    margin-top: 5px;
+    padding: 5px;
+  }
+  .turbine-content-wrapper {
+    margin-left: 0px !important;
+  }
+  .turbine-content {
+    width: 100% !important;
+  }
+  .barchart-content-wrapper h5 {
+    font-size: 14px !important;
+  }
+  .content-data-first .content {
+    padding: 38px 20px;
+  }
+  .chartbar-wrapper {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px !important;
+  }
+  .barchart-content-wrapper {
+    margin: 12px 0px !important;
+  }
+  .chartbar-wrapper-two-blocks {
+    flex-wrap: wrap;
+  }
+  .chartbar-wrapper-two-blocks .chart1 {
+    width: 100%;
+  }
+  .plant-data {
+    margin: 12px 0px !important;
+  }
+  .chartbar-wrapper .chartbar-wrapper-two-blocks {
+    width: 100% !important;
+  }
+  .chartbar-wrapper-two-blocks .chart2 {
+    width: 100% !important;
+  }
+  .chartbar-wrapper .chart3 {
+    width: 100% !important;
+  }
+  .barchart-content-wrapper {
+    flex-direction: column;
+  }
+  .barchart-content {
+    width: 100% !important;
+  }
+  .pie-chart-wrapper {
+    width: 100% !important;
+  }
+  .turbine-content-wrapper h5 {
+    font-size: 14px !important;
+  }
+  .pie-chart-wrapper h5 {
+    font-size: 15px !important;
+  }
+  .plant-data h5 {
+    font-size: 16px !important;
+  }
+}
+//mobile responsive ends here

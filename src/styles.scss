@@ -48,3 +48,18 @@ body{
 .chartbar-wrapper #chart {
   transform: translateY(-21px);
 }
+//tab responsive starts here
+@media only screen and (min-width:768px) and (max-width:1028px){
+  .chartbar-wrapper  #chart   .apexcharts-canvas{
+    height: 350px !important;
+    width: auto;
+    overflow: hidden;
+
+            }
+  .chartbar-wrapper  #chart   .apexcharts-canvas svg{
+    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+//tab responsive ends here
