@@ -70,17 +70,11 @@ export type ChartOptions3 = {
 export class DashboardComponent implements OnInit {
 
 
-  totalCapacity: number = 0;
-  totalCapacityRange: number = 634000;
+  public  totalCapacity: number = 0;
+  public  totalCapacityRange: number = 634000;
 
-  productionEfficency: number = 0;
-  productionEfficencyRange: number = 98
-
-  // @ViewChild("chart") chart!: ChartComponent;
-  constructor(private tableserviceref: TableService) { }
-
-
-
+  public productionEfficency: number = 0;
+  public productionEfficencyRange: number = 98
   public chartOptions: any;
 
   public chartOptions2: any;
@@ -95,19 +89,19 @@ export class DashboardComponent implements OnInit {
 
   public dashboardDate:Date=new Date()
 
+  public data: any;
 
-  data: any;
+  public  options: any;
 
-  options: any;
+  public  basicData: any;
 
-  basicData: any;
+  public basicOptions: any;
 
-  basicOptions: any;
+  public files!: TreeNode[];
 
-  files!: TreeNode[];
-
-  cols!: any[];
-  products: Powerplant[] = []
+  public cols!: any[];
+  public products: Powerplant[] = []
+  constructor(private tableserviceref: TableService) { }
 
   ngOnInit() {
     this.efficiencychart();
@@ -123,7 +117,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  counter() {
+  public counter():void{
     const interval = setInterval(() => {
       this.totalCapacity += 1000;
       if (this.totalCapacity >= this.totalCapacityRange) {
@@ -138,14 +132,14 @@ export class DashboardComponent implements OnInit {
     }, 50);
   }
 
-  tabledata() {
+  public tabledata():void {
     this.tableserviceref.onPowerplantData().subscribe((data) => {
       this.products = data
     })
   }
 
 
-  efficiencychart() {
+ public  efficiencychart():void {
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
     const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
@@ -195,7 +189,7 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  systemfrequency() {
+  public systemfrequency() :void{
     this.chartOptions = {
       series: [76],
       chart: {
@@ -238,7 +232,7 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  ambienttemp() {
+ public  ambienttemp():void{
     this.chartOptions4 = {
       series: [74],
       chart: {
@@ -281,7 +275,7 @@ export class DashboardComponent implements OnInit {
     };
 
   }
-  RelativeHum() {
+  public RelativeHum():void{
     this.chartOptions5 = {
       series: [70],
       chart: {
@@ -324,7 +318,7 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  barchart() {
+public barchart():void {
     this.chartOptions2 = {
       series: [
         {
@@ -334,7 +328,9 @@ export class DashboardComponent implements OnInit {
       ],
       chart: {
         type: "bar",
-        height: 350
+        height: 350,
+        width: "100%" // Set the desired width here
+
       },
       plotOptions: {
         bar: {
@@ -357,7 +353,7 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  plantdetails() {
+ public  plantdetails():void {
     this.files = [];
     for (let i = 0; i < 50; i++) {
       let node = {
@@ -388,7 +384,7 @@ export class DashboardComponent implements OnInit {
     ];
   }
 
-  pieechart() {
+ public  pieechart():void{
 
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
@@ -405,6 +401,8 @@ export class DashboardComponent implements OnInit {
     };
 
     this.options = {
+      responsive:true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           labels: {
@@ -416,7 +414,7 @@ export class DashboardComponent implements OnInit {
     };
   }
 
-  effiTurbine() {
+ public  effiTurbine():void {
     this.chartOptions6 = {
       series: [
         {
@@ -424,23 +422,6 @@ export class DashboardComponent implements OnInit {
           data: [92.00, 50.41, 60.53, 70.50,]
         }
       ],
-      annotations: {
-        points: [
-          {
-            x: "Bananas",
-            seriesIndex: 0,
-            label: {
-              borderColor: "red",
-              offsetY: 0,
-              style: {
-                color: "#fff",
-                background: "#775DD0"
-              },
-              text: "Bananas are good"
-            }
-          }
-        ]
-      },
       chart: {
         height: 350,
         type: "bar"
